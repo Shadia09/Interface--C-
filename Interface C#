@@ -1,0 +1,34 @@
+using System;
+
+interface IEmployee
+{
+    void Work();
+}
+
+class Manager : IEmployee
+{
+    public void Work()
+    {
+        Console.WriteLine("Manager manages the team");
+    }
+}
+
+class Developer : IEmployee
+{
+    public void Work()
+    {
+        Console.WriteLine("Developer writes code");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        IEmployee emp1 = new Manager();
+        IEmployee emp2 = new Developer();
+
+        emp1.Work();
+        emp2.Work();
+    }
+}
